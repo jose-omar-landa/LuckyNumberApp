@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class LuckyNumberActivity extends AppCompatActivity {
 
     TextView welcomeTxt, luckyNumberText;
@@ -22,9 +24,21 @@ public class LuckyNumberActivity extends AppCompatActivity {
         luckyNumberText = findViewById(R.id.luckyNumberText);
         shareBtn = findViewById(R.id.shareNumberButton);
 
+        //Username data
         Intent i = getIntent();
         String user_name = i.getStringExtra("name");
-
         Toast.makeText(this, "Username: " + user_name, Toast.LENGTH_SHORT).show();
+
+        //Random number generator
+        int random_number = generateRandomNum();
+        luckyNumberText.setText(""+random_number);
     }
+
+    public int generateRandomNum() {
+        Random random = new Random();
+        int upperLimit = 1000;
+        int generatedNumber = random.nextInt(upperLimit);
+        return generatedNumber;
+    }
+
 }
