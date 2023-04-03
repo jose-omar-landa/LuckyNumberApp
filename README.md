@@ -8,4 +8,4 @@ The user then the option to share their lucky number by clicking the "Share My L
 
 When clicked, the share button allows the user to choose their preferred messaging app to share thier lucky number.
 
-A pre-scripted message stating "User's Lucky Number is ____!" is then sent to the chosen recipient. 
+A pre-scripted message stating "Your friend User's Lucky Number is ____!" is then sent to the chosen recipient. 
